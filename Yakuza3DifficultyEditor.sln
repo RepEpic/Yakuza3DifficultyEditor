@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yakuza3DifficultyEditor.Avalonia", "Yakuza3DifficultyEditor.Avalonia\Yakuza3DifficultyEditor.Avalonia.csproj", "{8BF34914-EC7F-4049-A99F-882E8856D3C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yakuza3DifficultyEditor.WPF", "Yakuza3DifficultyEditor.WPF\Yakuza3DifficultyEditor.WPF.csproj", "{A03A3123-F4FF-4D4C-908E-A4F75C50E808}"
+	ProjectSection(ProjectDependencies) = postProject
+		{28B5A04C-417B-4F60-AA2A-F7DFF7A415F1} = {28B5A04C-417B-4F60-AA2A-F7DFF7A415F1}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yakuza3DifficultyEditor", "Yakuza3DifficultyEditor\Yakuza3DifficultyEditor.csproj", "{B2C28EF2-0270-4AE2-8255-8D0B4CCD431C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{28B5A04C-417B-4F60-AA2A-F7DFF7A415F1} = {28B5A04C-417B-4F60-AA2A-F7DFF7A415F1}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibYakuza3Difficulty", "LibYakuza3Difficulty\LibYakuza3Difficulty.csproj", "{28B5A04C-417B-4F60-AA2A-F7DFF7A415F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BF34914-EC7F-4049-A99F-882E8856D3C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BF34914-EC7F-4049-A99F-882E8856D3C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BF34914-EC7F-4049-A99F-882E8856D3C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BF34914-EC7F-4049-A99F-882E8856D3C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A03A3123-F4FF-4D4C-908E-A4F75C50E808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A03A3123-F4FF-4D4C-908E-A4F75C50E808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A03A3123-F4FF-4D4C-908E-A4F75C50E808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A03A3123-F4FF-4D4C-908E-A4F75C50E808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2C28EF2-0270-4AE2-8255-8D0B4CCD431C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C28EF2-0270-4AE2-8255-8D0B4CCD431C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C28EF2-0270-4AE2-8255-8D0B4CCD431C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C28EF2-0270-4AE2-8255-8D0B4CCD431C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28B5A04C-417B-4F60-AA2A-F7DFF7A415F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B5A04C-417B-4F60-AA2A-F7DFF7A415F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B5A04C-417B-4F60-AA2A-F7DFF7A415F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28B5A04C-417B-4F60-AA2A-F7DFF7A415F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D482659C-A2A9-461E-B85A-240A5535C212}
+	EndGlobalSection
+EndGlobal

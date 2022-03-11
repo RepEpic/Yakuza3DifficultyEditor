@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="350" d:DesignHeight="250"
+		Width="350" Height="250"
+		MinWidth="350" MinHeight="250"
+		MaxWidth="350" MaxHeight="250"
+        x:Class="Yakuza3DifficultyEditor.MainWindow"
+        Title="Yakuza 3 Difficulty Editor">
+	<DockPanel>
+		<Button Name="saveButton" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Margin="10,10">Save</Button>
+		<StackPanel Spacing="10">
+			<Menu x:Name="menu" VerticalAlignment="Top">
+				<MenuItem x:Name="menuFile"  Height="24" Header=" File ">
+					<MenuItem x:Name="menuFileOpen" Header="Open" />
+				</MenuItem>
+			</Menu>
+			<Grid Margin="10" VerticalAlignment="Bottom">
+				<!-- Row and Height config -->
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"></RowDefinition>
+					<RowDefinition Height="*"></RowDefinition>
+					<RowDefinition Height="*"></RowDefinition>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+
+				<TextBlock Margin="10,15" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">Selected File:</TextBlock>
+				<TextBlock x:Name="selectedFileName" Margin="10,15" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap"></TextBlock>
+				
+				<TextBlock Margin="10,15" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1">Current Difficulty:</TextBlock>
+				<TextBlock x:Name="currentDifficultyText" Margin="10,15" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap"></TextBlock>
+
+				<TextBlock Margin="10,10" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" >New Difficulty:</TextBlock>
+				<ComboBox x:Name="newDifficultyComboBox" SelectedIndex="0" Margin="10,10" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1">
+					<ComboBoxItem>Easy</ComboBoxItem>
+					<ComboBoxItem>Normal</ComboBoxItem>
+					<ComboBoxItem>Hard</ComboBoxItem>
+					<ComboBoxItem>Legend</ComboBoxItem>
+				</ComboBox>
+
+			</Grid>
+		</StackPanel>
+	</DockPanel>
+	<!-- HorizontalAlignment="Center" VerticalAlignment="Center"-->
+</Window>

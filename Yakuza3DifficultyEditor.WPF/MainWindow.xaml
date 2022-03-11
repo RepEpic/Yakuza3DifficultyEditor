@@ -1,0 +1,49 @@
+﻿<Window x:Class="Yakuza3DifficultyEditor.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Yakuza3DifficultyEditor.WPF"
+        mc:Ignorable="d"
+        Title="Yakuza 3 Difficulty Editor" Height="225" Width="300"
+        ResizeMode="NoResize"
+        MinHeight="225" MinWidth="300"
+        MaxHeight="225" MaxWidth="300">
+    <DockPanel>
+        <Button x:Name="saveButton" Content=" Save " Click="SaveButton_Click" Margin="8,8" HorizontalAlignment="Center" VerticalAlignment="Bottom" DockPanel.Dock="Bottom"/>
+        <StackPanel>
+            <Menu x:Name="menu" VerticalAlignment="Top">
+                <MenuItem x:Name="menuFile"  Height="24" HorizontalContentAlignment="Center" Header=" File ">
+                    <MenuItem x:Name="menuFileOpen" Header="Open" Click="MenuFileOpen_Click"/>
+                </MenuItem>
+            </Menu>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <!-- Selected File -->
+                <TextBlock Margin="10,12" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">Selected File:</TextBlock>
+                <TextBlock x:Name="selectedFileName" Margin="10,12" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap"/>
+
+                <!-- Current Difficulty -->
+                <TextBlock Margin="10,12" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1">Current Difficulty:</TextBlock>
+                <TextBlock x:Name="currentDifficultyText" Margin="10,12" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap"/>
+
+                <TextBlock Margin="10,10" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" >New Difficulty:</TextBlock>
+                <ComboBox x:Name="newDifficultyComboBox" SelectionChanged="NewDifficultyComboBox_SelectionChanged" SelectedIndex="-1" Margin="10,10" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1">
+                    <ComboBoxItem>Easy</ComboBoxItem>
+                    <ComboBoxItem>Normal</ComboBoxItem>
+                    <ComboBoxItem>Hard</ComboBoxItem>
+                    <ComboBoxItem>Legend</ComboBoxItem>
+                </ComboBox>
+            </Grid>
+        </StackPanel>
+    </DockPanel>
+</Window>

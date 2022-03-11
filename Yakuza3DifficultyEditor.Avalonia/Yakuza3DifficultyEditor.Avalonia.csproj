@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>warnings</Nullable>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+	<AssemblyName>Yakuza3DifficultyEditor</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.999-cibuild0018762-beta" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.999-cibuild0018762-beta" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.999-cibuild0018762-beta" />
+    <PackageReference Include="MessageBox.Avalonia" Version="1.7.1" />
+   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibYakuza3Difficulty\LibYakuza3Difficulty.csproj" />
+  </ItemGroup>
+</Project>
